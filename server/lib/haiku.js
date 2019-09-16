@@ -51,17 +51,18 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
+var express = require('express')
+var bodyParser = require('body-parser')
+ 
+var app = express()
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.get('/', (request, response) =>  response.sendFile(`${__dirname}/index.html`));
 
-app.post('/api/data', (request, response) => {
-  const postBody = request.body;
-  console.log(postBody);
-});
+
+app.post('/login', urlencodedParser, function (req, res) {
+  console.log(req.body);
+  res.send('welcome, ' + req.body.username)
+})
 
 
 
