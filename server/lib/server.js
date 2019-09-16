@@ -16,7 +16,7 @@ module.exports.run = (config) => {
 
 
 
-//var express = require("express");
+/*//var express = require("express");
 const mysql = require('mysql');
 //var app = express();
 app.use(express.logger());
@@ -71,3 +71,21 @@ app.get('/', function(request, response) {
 app.listen(port, function() {
 console.log("Listening on " + port);
 });*/
+*/
+
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
+
+client.connect();
+
+client.query('SELECT * from salesforce.contact ;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
