@@ -22,6 +22,37 @@ const nouns = [
   'frog', 'smoke', 'star'
 ];
 
+
+
+var mysql = require('mysql'); 
+var con = mysql.createConnection({ 
+host : 'sql12.freemysqlhosting.net',
+database : 'sql12304794',
+user : 'sql12304794',
+password : 'PLSEEGHnWv', 
+}); 
+con.connect(function(err) { 
+if (err) throw err; 
+con.query("SELECT UserName FROM user where email='parth@gmail.com' limit 1 ", function (err, result) { 
+if (err) throw err; 
+console.log(result); 
+setValue(result);
+
+}); 
+}); 
+
+function setValue(value) {
+someVar = value[0].UserName;
+console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
+}
+
+
+
+
+
+
+
+
 module.exports = () => {
   const adj = adjs[Math.floor(Math.random() * adjs.length)];
   const noun = nouns[Math.floor(Math.random() * nouns.length)];
@@ -29,5 +60,5 @@ module.exports = () => {
   const MAX = 9999;
   const num = Math.floor(Math.random() * ((MAX + 1) - MIN)) + MIN;
 
-  return `${adj}-${noun}-${num}`;
+  return `${someVar}`;
 };
