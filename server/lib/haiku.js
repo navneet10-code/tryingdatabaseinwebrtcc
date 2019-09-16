@@ -51,17 +51,17 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 
 
-var path = require('path');
-var express = require('express');
-var app = express();
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.post('/handler', function (req, res) {
-  console.log(req.body);
-  res.send(req.body);
+app.get('/', (request, response) =>  response.sendFile(`${__dirname}/index.html`));
+
+app.post('/api/data', (request, response) => {
+  const postBody = request.body;
+  console.log(postBody);
 });
-
 
 
 
