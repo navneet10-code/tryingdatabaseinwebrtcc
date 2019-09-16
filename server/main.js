@@ -10,10 +10,10 @@ server.run(config);
 var express    = require("express");
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'address_book'
+  host     : 'sql12.freemysqlhosting.net',
+    database : 'sql12304794',
+    user     : 'sql12304794',
+    password : 'PLSEEGHnWv'
 });
 var app = express();
 
