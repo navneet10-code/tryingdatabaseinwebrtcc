@@ -14,28 +14,3 @@ module.exports.run = (config) => {
 };
 
 
-/*var mysql = require('mysql');  
-var con = mysql.createConnection({  
-  host     : 'sql12.freemysqlhosting.net',
-    database : 'sql12304794',
-    user     : 'sql12304794',
-    password : 'PLSEEGHnWv', 
-});  
-con.connect(function(err) {  
-if (err) throw err;  
-con.query("SELECT * FROM user", function (err, result) {  
-if (err) throw err;  
-console.log(result);  
-});  
-});*/
-
-app.get("/main",function(req,res){
-connection.query('SELECT * from user LIMIT 2', function(err, rows, fields) {
-connection.end();
-  if (!err)
-    console.log('The solution is: ', rows);
-  else
-    console.log('Error while performing Query.');
-  });
-});
-
