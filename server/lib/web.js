@@ -7,7 +7,7 @@ const client = new Client({
 
 client.connect();
 
-client.query('SELECT * FROM user;', (err, res) => {
+client.query('SELECT * from salesforce.contact;', (err, res) => {
   if (err) throw err;
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
