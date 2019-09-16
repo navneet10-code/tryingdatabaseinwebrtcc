@@ -50,7 +50,7 @@ if(!err) {
 
 app.get("/",function(req,res){
 connection.query('SELECT * from user', function(err, rows, fields) {
-  console.log('The solution is: ', rows);
+  
 connection.end();
   if (!err)
     console.log('The solution is: ', rows);
