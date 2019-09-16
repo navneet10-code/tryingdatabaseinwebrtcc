@@ -16,9 +16,9 @@ module.exports.run = (config) => {
 
 
 
-var express = require("express");
-var mysql = require('mysql');
-var app = express();
+//var express = require("express");
+const mysql = require('mysql');
+//var app = express();
 app.use(express.logger());
 
 var db_config = {
