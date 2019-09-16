@@ -51,32 +51,13 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 
 
-const express = require('express');
-//const session = require('express-session');
-//const bodyParser = require('body-parser');
-//const redis = require('redis');
-//const redisStore = require('connect-redis')(session);
-//const client  = redis.createClient();
-const router = express.Router();
-const app = express();
 
+var express = require('express');
+var router = express.Router();
 
-
-//app.use(bodyParser.json());      
-//app.use(bodyParser.urlencoded({extended: true}));
-//app.use(express.static(__dirname + '/views'));
-
-router.get('/',(req,res) => {
-    let sess = req.session;
-    
-           console.log('res',res);        //return res.redirect('/admin');
-    
-   
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Cool, huh!', condition: true, anyArray: [1,2,3] });
 });
-
-
-
-
 
 
 
