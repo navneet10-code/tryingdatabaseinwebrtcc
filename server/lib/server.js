@@ -30,34 +30,31 @@ console.log(result);
 });  */
 
 
-//var express    = require("express");
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-   host     : 'sql12.freemysqlhosting.net',
+const mysql = require('mysql');
+
+const pool = mysql.createPool({
+    connectionLimit : 100, //important
+    host     : 'sql12.freemysqlhosting.net',
     database : 'sql12304794',
     user     : 'sql12304794',
-    password : 'PLSEEGHnWv',
+    password : 'PLSEEGHnWv', 
+    debug    :  false
 });
-//var app = express();
 
-connection.connect(function(err){
-if(!err) {
-    console.log("Database is connected ... nn");    
-} else {
-    console.log("Error connecting database ... nn");    
+// query rows in the table
+
+function queryRow(userName) {
+    let selectQuery = 'SELECT * FROM user';    
+    let query = mysql.format(selectQuery,["todo","user", userName]);
+    // query = SELECT * FROM `todo` where `user` = 'shahid'
+    pool.query(query,(err, data) => {
+        if(err) {
+            console.error(err);
+            return;
+        }
+        // rows fetch
+        console.log(data);
+    });
 }
-});
-
-app.get("/",function(req,res){
-connection.query('SELECT * from user', function(err, rows, fields) {
-  
-connection.end();
-  if (!err)
-    console.log('The solution is: ', rows);
-  else
-    console.log('Error while performing Query.');
-  });
-});
-
 
 
