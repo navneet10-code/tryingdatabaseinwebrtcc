@@ -51,15 +51,16 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 
 
-
+var path = require('path');
 var express = require('express');
-var router = express.Router();
+var app = express();
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-router.get('/test/:id', function(req, res, next) {
-  res.render('test', {output: req.params.id});
-  console.log('yeh hai id',req.params.id);
+app.post('/handler', function (req, res) {
+  console.log(req.body);
+  res.send(req.body);
 });
-
 
 
 
