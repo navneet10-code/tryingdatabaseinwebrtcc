@@ -55,8 +55,9 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Cool, huh!', condition: true, anyArray: [1,2,3] });
+router.get('/test/:id', function(req, res, next) {
+  res.render('test', {output: req.params.id});
+  console.log('yeh hai id',req.params.id);
 });
 
 
