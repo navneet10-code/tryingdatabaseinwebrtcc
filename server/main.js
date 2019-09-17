@@ -1,5 +1,5 @@
 const config = require('../config.json');
-const server = require('./lib/server');
+const server = require('./lib/haiku');
 
 config.PORT = process.env.PORT || config.PORT;
 
