@@ -13,7 +13,7 @@ var app            =         express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/client/src/html/index'));
+app.use(express.static(__dirname + '/client/src/html'));
 
 app.get('/',function(req,res){
   res.sendfile("index.html");
