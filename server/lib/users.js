@@ -6,7 +6,7 @@ const socket = require('./socket');
 
 
 
-var abcd = 'parth@gmail.com';
+var abcd ;
 
 
 var mysql = require('mysql'); 
@@ -18,7 +18,7 @@ password : 'PLSEEGHnWv',
 }); 
 con.connect(function(err) { 
 if (err) throw err; 
-con.query("SELECT UserName FROM user where email= 'parth@gmail.com'", function (err, result) { 
+con.query("SELECT UserName FROM user where email= '" + abcd + "'", function (err, result) { 
 if (err) throw err; 
 console.log(result); 
 setValue(result);
