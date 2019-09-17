@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
     res.sendFile('index.html');
 });
 
-app.post('/submit-student-data', function (req, res) {
+app.post('/', function (req, res) {
     var name = req.body.firstName + ' ' + req.body.lastName;
     
     res.send(name + ' Submitted Successfully!');
