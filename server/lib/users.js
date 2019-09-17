@@ -6,7 +6,7 @@ const socket = require('./socket');
 
 
 
-var abcd = null ;
+var abcd ;
 
 
 var mysql = require('mysql'); 
@@ -128,7 +128,7 @@ const users = {};
 
 // Random ID until the ID is not in use
 async function randomID() {
-  let id = 'parth' ;
+  let id = abcd ;
   while (id in users) {
     await Promise.delay(5);
     
