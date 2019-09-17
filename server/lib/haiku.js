@@ -49,14 +49,15 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 console.log('abovee the body vlaueeeeee varrrr');
 
-var express = require("express");
+var path = require('path');
+var express = require('express');
 var app = express();
- 
-app.post('/route', function(req,res){
-	let inputContent = req.body.textField;
-	console.log('geetting the value of the body');
-  console.log(inputContent);
-  
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.post('/handler', function (req, res) {
+  console.log(req.body);
+  res.send(req.body);
 });
 
 
