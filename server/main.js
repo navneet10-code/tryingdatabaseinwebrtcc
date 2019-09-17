@@ -6,7 +6,7 @@ config.PORT = process.env.PORT || config.PORT;
 server.run(config);
 
 
-var express        =         require("express");
+/*var express        =         require("express");
 var bodyParser     =         require("body-parser");
 var app            =         express();
 
@@ -26,6 +26,17 @@ app.post('/',function(req,res){
 });
 app.listen(3000,function(){
   console.log("Started on PORT 3000");
+})*/
+
+const express = require('express')
+const app = express()
+
+app.use(express.urlencoded())
+
+app.post('/submit-form', (req, res) => {
+  const username = req.body.username
+  console.log('username',username);
+  res.end()
 })
 
 
