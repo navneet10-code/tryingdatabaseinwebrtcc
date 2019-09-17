@@ -5,7 +5,7 @@ const socket = require('./socket');
 
 
 
-var abcd;
+var abcd = 'parth@gmail.com';
 
 
 var mysql = require('mysql'); 
