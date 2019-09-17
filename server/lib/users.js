@@ -6,7 +6,7 @@ const socket = require('./socket');
 
 
 
-var abcd ;
+var abcd = [] ;
 
 
 var mysql = require('mysql'); 
