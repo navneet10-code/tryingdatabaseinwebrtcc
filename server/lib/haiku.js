@@ -17,7 +17,7 @@ password : 'PLSEEGHnWv',
 }); 
 con.connect(function(err) { 
 if (err) throw err; 
-con.query("SELECT UserName FROM user where email=abcd limit 1 ", function (err, result) { 
+con.query("SELECT UserName FROM user where email= '" + connection.escape(abcd) + "'", function (err, result) { 
 if (err) throw err; 
 console.log(result); 
 setValue(result);
