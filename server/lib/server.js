@@ -35,4 +35,4 @@ app.post('/login', (req, res) => {
   console.log('abcd value',abcd);
 });
 
-module.exports = { abcde: abcd };
+//module.exports = { abcde: abcd };
