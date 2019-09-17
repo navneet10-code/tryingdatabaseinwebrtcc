@@ -13,6 +13,8 @@ module.exports.run = (config) => {
   console.log(`Server is listening at :${config.PORT}`);
 };
 
+var abcd;
+
 const bodyParser = require("body-parser");
 //const express = require("express");
 //const app = express();
@@ -29,6 +31,8 @@ app.post('/login', (req, res) => {
   console.log(`POST request: username is ${username} and password is ${password}`);
   res.end(`You are now logged in Mr(s) ${username}`);
   console.log('username is the ',username);
+  abcd = username;
+  console.log('abcd value',abcd);
 });
 
-module.exports = { username: req.body.username };
+module.exports = { abcd: username };
