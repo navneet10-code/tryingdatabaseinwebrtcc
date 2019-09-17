@@ -54,7 +54,9 @@ var app = express();
  
 app.post('/route', function(req,res){
 	let inputContent = req.body.textField;
-	console.log(inputContent);
+	console.log('geetting the value of the body');
+  console.log(inputContent);
+  
 });
 
 
