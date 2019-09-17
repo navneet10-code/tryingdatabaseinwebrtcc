@@ -1,5 +1,5 @@
 var server = require('./server');
-console.log(server.username);
+console.log(server.abcd);
 
 const adjs = [
   'autumn', 'hidden', 'bitter', 'misty', 'silent', 'empty', 'dry', 'dark',
