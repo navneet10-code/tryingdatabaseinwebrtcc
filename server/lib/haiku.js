@@ -1,6 +1,5 @@
-const server = require('./sourceFile');
-
-console.log('i have got the username',username);
+var server = require('./server');
+console.log(server.username);
 
 const adjs = [
   'autumn', 'hidden', 'bitter', 'misty', 'silent', 'empty', 'dry', 'dark',
