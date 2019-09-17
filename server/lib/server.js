@@ -36,4 +36,4 @@ app.post('/login', (req, res) => {
 });
 
 //module.exports = { abcde: abcd };
-module.exports.vari = abcd;
+//module.exports.vari = abcd;
