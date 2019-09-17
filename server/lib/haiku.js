@@ -49,15 +49,26 @@ console.log('nnnnnnnnnnnnnnnnnnnnnnn',someVar);
 
 console.log('abovee the body vlaueeeeee varrrr');
 
-var path = require('path');
+
+
+
+
+
+
 var express = require('express');
 var app = express();
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.post('/handler', function (req, res) {
-  console.log(req.body);
-  res.send(req.body);
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get('/', function (req, res) {
+    res.sendFile('index.html');
+});
+
+app.post('/submit-student-data', function (req, res) {
+    var name = req.body.firstName + ' ' + req.body.lastName;
+    
+    res.send(name + ' Submitted Successfully!');
 });
 
 
