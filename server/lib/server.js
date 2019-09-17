@@ -32,5 +32,5 @@ app.post('/login', (req, res) => {
 });
 
 module.exports = () => {
-  const username
+  const username;
   };
