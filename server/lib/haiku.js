@@ -1,5 +1,6 @@
 var server = require('./server');
 console.log(server.vari);
+console.log('i am below the variable');
 
 const adjs = [
   'autumn', 'hidden', 'bitter', 'misty', 'silent', 'empty', 'dry', 'dark',
