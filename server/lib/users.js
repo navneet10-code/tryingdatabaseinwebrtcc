@@ -16,15 +16,9 @@ database : 'sql12304794',
 user : 'sql12304794',
 password : 'PLSEEGHnWv', 
 }); 
-con.connect(function(err) { 
-if (err) throw err; 
-con.query("SELECT UserName FROM user where email= '" + abcd + "'", function (err, result) { 
-if (err) throw err; 
-console.log(result); 
-setValue(result);
 
-}); 
-}); 
+
+
 
 function setValue(value) {
 someVar = value[0].UserName;
@@ -78,6 +72,20 @@ app.post('/login', (req, res) => {
   console.log('username is the ',username);
   abcd = username;
   console.log('abcd value',abcd);
+  
+  
+  con.connect(function(err) { 
+if (err) throw err; 
+con.query("SELECT UserName FROM user where email= '" + abcd + "'", function (err, result) { 
+if (err) throw err; 
+console.log(result); 
+setValue(result);
+
+}); 
+}); 
+
+  
+  
 });
 
 //module.exports = { abcde: abcd };
