@@ -12,9 +12,9 @@ var abcd = [] ;
 var mysql = require('mysql'); 
 var con = mysql.createConnection({ 
 host : 'sql12.freemysqlhosting.net',
-database : 'sql12305577',
-user : 'sql12305577',
-password : 'isc9mfSmr9', 
+database : 'sql12306370',
+user : 'sql12306370',
+password : 'tfR9HnxDVV', 
 }); 
 
 
@@ -76,7 +76,7 @@ app.post('/login', (req, res) => {
   
   
 
-con.query("SELECT UserName FROM User where email= '" + abcd + "'", function (err, result) { 
+con.query("SELECT UserName FROM users where email= '" + abcd + "'", function (err, result) { 
 if (err) throw err; 
 console.log(result); 
 setValue(result);
