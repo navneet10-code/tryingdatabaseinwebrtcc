@@ -16,10 +16,7 @@
       const username = $("#ipUsername").val();
       const password = $("#ipPassword").val();
       $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
-        if (status === 'success')
-          alert(`Login success\n${data}`);
-        else
-          alert("Login denied");
+        
       });
     }
   </script>
