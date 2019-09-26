@@ -1,16 +1,25 @@
-
+<!---------- workinh show and hide but without modall---->
 <!DOCTYPE html>
 <html>
   
-  
+  <script>
+    
+    function showhide() {
+       	var e = document.getElementById('uniquename');
+      var ef = document.getElementById('un');
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
+     }
+    
+    </script>
+    
+    
+    
+
   
   <a href="javascript:showhide()">
     		Click to show/hide.
     	</a>
-  
-  
-  
- 
   
   
   
@@ -20,15 +29,19 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
- <body>
+
+<body>
 	<nav class="navbar-header">
 		<span class="navbar-brand">
 			<img src="${require(`../assets/icon1.png`)}" /> React VideoCall
 		</span>
 	</nav>
 
+	<div id="root"></div>
+  
+ 
 </body>  
-<div id="root"></div>
+  
 
   </div>
   
@@ -36,6 +49,14 @@
   
 
 
+
+
+
+<head>
+  
+  
+  <!--<meta http-equiv="Refresh" content="5; url=re.html">-->
+  
   
   
   
@@ -49,15 +70,8 @@
         
       });
     }
-    
-    function showhide() {
-       	var e = document.getElementById('uniquename');
-      var ef = document.getElementById('un');
-       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
-     }
   </script>
-
+</head>
 
 
   
