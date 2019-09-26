@@ -3,8 +3,8 @@
   
   <script>
     
-    function showhide(id) {
-       	var e = document.getElementById(id);
+    function showhide() {
+       	var e = document.getElementById('uniquename');
        	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
      }
     
@@ -14,7 +14,7 @@
     
 
   
-  <a href="javascript:showhide('uniquename')">
+  <a href="javascript:showhide()">
     		Click to show/hide.
     	</a>
   
@@ -80,7 +80,7 @@
     <input id="ipPassword" size="40" type="password">
     <br>
     <br>
-    <button type="submit" onClick="showhide()">Login</button>
+    <button type="submit">Login</button>
   </form>
 
 </body>
