@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
   
+  <script>
+    
+    function showhide(id) {
+       	var e = document.getElementById(id);
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+     }
+    
+    </script>
+    
+    
+    
+
   
+  <a href="javascript:showhide('uniquename')">
+    		Click to show/hide.
+    	</a>
+  
+  
+  
+<div id="uniquename" style="display:none;">
+
   <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
-  
-  
-  
-<div id="Div2" style="display:none;">
-
-  
 
 <body>
 	<nav class="navbar-header">
@@ -23,7 +37,7 @@
 	<div id="root"></div>
   
  
- 
+</body>  
   
 
   </div>
@@ -33,9 +47,9 @@
 
 
 
-<div id="Div1" >
 
 
+<head>
   
   
   <!--<meta http-equiv="Refresh" content="5; url=re.html">-->
@@ -52,31 +66,13 @@
       $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
         
       });
-      
-      
-      
-      if (username != "" && document.getElementById('Div1')) {
-console.log('inside if condition',username);
-                if (document.getElementById('Div1').style.display == 'none') {
-                    document.getElementById('Div1').style.display = 'block';
-                    document.getElementById('Div2').style.display = 'none';
-                }
-                else {
-                    //document.getElementById('Div1').style.display = 'none';
-                    document.getElementById('Div2').style.display = 'block';
-                }
-            }
-}
-      
-      
-      
-
+    }
   </script>
+</head>
 
-
-
+<body>
   <h1>Sign in</h1>
-  
+  <form onsubmit="login()">
     <label for="ipUsername">Username:</label>
     <input id="ipUsername" size="40" autocomplete="off">
     <br>
@@ -84,9 +80,9 @@ console.log('inside if condition',username);
     <input id="ipPassword" size="40" type="password">
     <br>
     <br>
-    <button onClick="login()" >Login</button>
-  
+    <button type="submit" >Login</button>
+  </form>
 
 </body>
-  </div>
+
 </html>
