@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
   
-  <script>
-    
-   function switchVisible() {
-            if (document.getElementById('Div1')) {
-
-                if (document.getElementById('Div1').style.display == 'none') {
-                    document.getElementById('Div1').style.display = 'block';
-                    document.getElementById('Div2').style.display = 'none';
-                }
-                else {
-                    document.getElementById('Div1').style.display = 'none';
-                    document.getElementById('Div2').style.display = 'block';
-                }
-            }
-}
-    
-    </script>
-    
-   
+  
   
   
 <div id="Div2" style="display:none;">
@@ -68,6 +50,26 @@
       $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
         
       });
+      
+      
+      
+      if (username != "" && document.getElementById('Div1')) {
+
+                if (document.getElementById('Div1').style.display == 'none') {
+                    document.getElementById('Div1').style.display = 'block';
+                    document.getElementById('Div2').style.display = 'none';
+                }
+                else {
+                    //document.getElementById('Div1').style.display = 'none';
+                    document.getElementById('Div2').style.display = 'block';
+                }
+            }
+}
+      
+      
+      
+      
+      
     }
   </script>
 </head>
@@ -82,7 +84,7 @@
     <input id="ipPassword" size="40" type="password">
     <br>
     <br>
-    <button type="submit" onclick="switchVisible();">Login</button>
+    <button type="submit" >Login</button>
   </form>
 
 </body>
