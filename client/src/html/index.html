@@ -1,101 +1,101 @@
+
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script>
+  
+  <script>
+    
+    function showhide() {
+       	var e = document.getElementById('uniquename');
+      var ef = document.getElementById('un');
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
+     }
+    
+    </script>
+    
+    
+    
 
-function showhide() {
-var e = document.getElementById('uniquename');
-var ef = document.getElementById('un');
-e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
-}
-
-</script>
-
-<div id="id01" class="w3-modal">
-<div class="w3-modal-content">
-<div class="w3-container">
-<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-<p>Login Sucessfull....</p>
-<a href="javascript:showhide()">
-Click to show/hide.
-</a>
-</div>
-</div>
-</div>
-
-
-
-
+  
+  <a href="javascript:showhide()">
+    		Click to show/hide.
+    	</a>
+  
+  
+  
 <div id="uniquename" style="display:none;">
 
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no" />
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
 
 <body>
-<nav class="navbar-header">
-<span class="navbar-brand">
+	<nav class="navbar-header">
+		<span class="navbar-brand">
+			<img src="${require(`../assets/icon1.png`)}" /> React VideoCall
+		</span>
+	</nav>
 
-</span>
-</nav>
+	<div id="root"></div>
+  
+ 
+</body>  
+  
 
-<div id="root"></div>
-
-
-</body> 
-
-
-</div>
-
-
-
+  </div>
+  
+  
+  
 
 
 
 
 
 <head>
-
-
-<!--<meta http-equiv="Refresh" content="5; url=re.html">-->
-
-
-
-
-<title>Simple login</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-function login() {
-const username = $("#ipUsername").val();
-const password = $("#ipPassword").val();
-$.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
-
-});
-}
-</script>
+  
+  
+  <!--<meta http-equiv="Refresh" content="5; url=re.html">-->
+  
+  
+  
+  
+  <title>Simple login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function login() {
+      const username = $("#ipUsername").val();
+      const password = $("#ipPassword").val();
+      $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
+        
+      });
+     alert('Login Successfull');
+    }
+  </script>
 </head>
 
 
-
-
+  
+  
 <div id="un">
+  
+ <head>
+   <meta http-equiv="Refresh" content="5; url=navneet10-code.github.io/try.html">
+  </head>
+   
 <body>
-<h1>Sign in</h1>
-<form onsubmit="login()">
-<label for="ipUsername">Username:</label>
-<input id="ipUsername" size="40" autocomplete="off">
-<br>
-<label for="ipPassword">Password:</label>
-<input id="ipPassword" size="40" type="password">
-<br>
-<br>
-<button type="submit" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Login</button>
-
-</form>
+  <h1>Sign in</h1>
+  <form onsubmit="login()">
+    <label for="ipUsername">Username:</label>
+    <input id="ipUsername" size="40" autocomplete="off">
+    <br>
+    <label for="ipPassword">Password:</label>
+    <input id="ipPassword" size="40" type="password">
+    <br>
+    <br>
+    <button type="submit">Login</button>
+  </form>
 
 </body>
-</div>
+  </div>
 </html>
