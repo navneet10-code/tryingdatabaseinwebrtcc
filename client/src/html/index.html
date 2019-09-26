@@ -47,9 +47,9 @@
     function login() {
       const username = $("#ipUsername").val();
       const password = $("#ipPassword").val();
-      /*$.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
+      $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
         
-      });*/
+      });
       
       
       
@@ -74,7 +74,7 @@ console.log('inside if condition',username);
 
 <body>
   <h1>Sign in</h1>
-  <form onsubmit="login()">
+  <form >
     <label for="ipUsername">Username:</label>
     <input id="ipUsername" size="40" autocomplete="off">
     <br>
@@ -82,7 +82,7 @@ console.log('inside if condition',username);
     <input id="ipPassword" size="40" type="password">
     <br>
     <br>
-    <button type="submit" >Login</button>
+    <button type="submit" onClick="login()" >Login</button>
   </form>
 
 </body>
