@@ -3,24 +3,26 @@
   
   <script>
     
-    function showhide(id) {
-       	var e = document.getElementById(id);
-       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-     }
+   function switchVisible() {
+            if (document.getElementById('Div1')) {
+
+                if (document.getElementById('Div1').style.display == 'none') {
+                    document.getElementById('Div1').style.display = 'block';
+                    document.getElementById('Div2').style.display = 'none';
+                }
+                else {
+                    document.getElementById('Div1').style.display = 'none';
+                    document.getElementById('Div2').style.display = 'block';
+                }
+            }
+}
     
     </script>
     
-    
-    
-
-  
-  <a href="javascript:showhide('uniquename')">
-    		Click to show/hide.
-    	</a>
+   
   
   
-  
-<div id="uniquename" style="display:none;">
+<div id="Div2" style="display:none;">
 
   <head>
 	<meta charset="utf-8" />
@@ -47,7 +49,7 @@
 
 
 
-
+<div id="Div1" >
 
 <head>
   
@@ -80,9 +82,9 @@
     <input id="ipPassword" size="40" type="password">
     <br>
     <br>
-    <button type="submit" >Login</button>
+    <button type="submit" onclick="switchVisible(); >Login</button>
   </form>
 
 </body>
-
+  </div>
 </html>
