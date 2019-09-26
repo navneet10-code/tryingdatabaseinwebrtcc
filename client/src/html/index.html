@@ -5,7 +5,9 @@
     
     function showhide() {
        	var e = document.getElementById('uniquename');
+      var ef = document.getElementById('un');
        	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
      }
     
     </script>
@@ -70,6 +72,10 @@
   </script>
 </head>
 
+
+  
+  
+<div id="un">
 <body>
   <h1>Sign in</h1>
   <form onsubmit="login()">
@@ -84,5 +90,5 @@
   </form>
 
 </body>
-
+  </div>
 </html>
