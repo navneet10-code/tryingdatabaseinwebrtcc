@@ -1,8 +1,49 @@
 <!DOCTYPE html>
 <html>
+  
+  <script>
+    
+    function showhide(id) {
+       	var e = document.getElementById(id);
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+     }
+    
+    </script>
+    
+    
+    
 
+  
+  <a href="javascript:showhide('uniquename')">
+    		Click to show/hide.
+    	</a>
+  
+  
+  
+<div id="uniquename" style="display:none;">
 
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
 
+<body>
+	<nav class="navbar-header">
+		<span class="navbar-brand">
+			<img src="${require(`../assets/icon1.png`)}" /> React VideoCall
+		</span>
+	</nav>
+
+	<div id="root"></div>
+  
+ 
+</body>  
+  
+
+  </div>
+  
+  
+  
 
 
 
@@ -11,7 +52,7 @@
 <head>
   
   
-  <meta http-equiv="Refresh" content="5; url=re.html">
+  <!--<meta http-equiv="Refresh" content="5; url=re.html">-->
   
   
   
