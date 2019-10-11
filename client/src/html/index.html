@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   
-  <script>
+  <!--<script>
     
     function showhide() {
        	var e = document.getElementById('uniquename');
@@ -11,7 +11,7 @@
         ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
      }
     
-    </script>
+    </script>-->
     
     
     
@@ -73,7 +73,7 @@ var c = url.searchParams.get("varName");
 console.log(c);
     
       
-      $.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
+      $.post("https://webrtcccccc.herokuapp.com/login", { c : c}, (data, status) => {
         
       });
      
