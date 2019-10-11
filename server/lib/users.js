@@ -66,6 +66,7 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
   const c = req.body.c;
+  abcd = c;
   //const password = req.body.password;
   //console.log(`POST request: username is ${username} and password is ${password}`);
   //res.end(`You are now logged in Mr(s) ${username}`);
