@@ -65,24 +65,24 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  console.log(`POST request: username is ${username} and password is ${password}`);
-  res.end(`You are now logged in Mr(s) ${username}`);
-  console.log('username is the ',username);
-  abcd = username;
-  console.log('abcd value',abcd);
+  const c = req.body.c;
+  //const password = req.body.password;
+  //console.log(`POST request: username is ${username} and password is ${password}`);
+  //res.end(`You are now logged in Mr(s) ${username}`);
+  console.log('username is the ',c);
+  //abcd = username;
+  //console.log('abcd value',abcd);
   
   
   
 
-con.query("SELECT UserName FROM users where email= '" + abcd + "'", function (err, result) { 
+/*con.query("SELECT UserName FROM users where email= '" + abcd + "'", function (err, result) { 
 if (err) throw err; 
 console.log(result); 
 setValue(result);
 
 
-}); 
+}); */
 
   
   
